@@ -24,6 +24,7 @@ nav {
   display: flex;
   align-items: center;
   height: 100px;
+  margin-left: 20px;
 }
 .logo img {
   width: 40px;
@@ -51,17 +52,18 @@ nav {
   text-decoration: none;
   color: white;
   margin-left: 35px;
-  font-weight: 400px;
+  font-weight: 400;
 }
 .links ul li a img {
   width: 50px;
   height: 50px;
+  margin-right: 20px;
 }
 /* ------------------------------------------------------
                             main 
 -------------------------------------------------------*/
 main {
-  width: 870px;
+  max-width: 870px;
   margin: 0 auto;
 }
 .players-and-blogs {
@@ -76,13 +78,16 @@ h2 {
   margin-bottom: 40px;
 }
 .players {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-row-gap: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 .player {
   display: flex;
   align-items: center;
+  width: 250px;
+  margin-bottom: 15px;
 }
 .player img {
   width: 55px;
@@ -98,13 +103,14 @@ hr {
   margin: 30px 0;
 }
 .blogs {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 30px;
-  margin-bottom: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 .blog {
   display: flex;
+  width: 400px;
+  margin-bottom: 20px;
 }
 .blog img {
   width: 177px;
@@ -135,21 +141,22 @@ hr {
   margin-top: 30px;
 }
 .courses {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 .course {
   padding: 15px 13px;
   /* box-shadow: 0px 5.34229px 13.3557px rgba(0, 0, 0, 0.1); */
   border-radius: 15px;
+  width: 220px;
+  margin-bottom: 20px;
 }
 .course:hover {
   box-shadow: 0px 5.34229px 13.3557px rgba(0, 0, 0, 0.25);
 }
 .course img {
-  width: 224px;
-  height: 104px;
+  width: 100%;
 }
 .course h3 {
   font-family: "Roboto", sans-serif;
@@ -214,4 +221,46 @@ footer {
 }
 footer p {
   text-align: center;
+}
+
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) { 
+  .logo, .links ul li a img{
+    margin-left: 10px;
+  }
+  .links ul li a {
+    margin-left: 10px;
+  }
+  .blog {
+    display: block;
+  }
+  .blog img {
+    width: 100%;
+    height: auto;
+  }
+  .blogs {
+    justify-content: flex-start;
+    margin-left: 0px;
+  }
+  .course {
+    width: 100%;
+  }
+}
+
+ /* Medium devices (tablets, 768px and up) */
+@media (max-width: 768px) and (min-width: 575px) {  
+  .blog {
+    width: 100%;
+  }
+  .blogs {
+    justify-content: flex-start;
+    margin-left: 50px;
+  }
+  .blog-titles h3 {
+    font-size: 18px;
+  }
+  .course {
+    width: 300px;
+  }
 }
