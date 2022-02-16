@@ -5,7 +5,7 @@ for (const item of changingColor) {
     })
 }
 
-document.getElementById("top-players").style.backgroundColor = 'rgb(255 163 0 / 10%)';
+// document.getElementById("top-players").style.backgroundColor = 'rgb(255 163 0 / 10%)';
 
 document.getElementById('submit').addEventListener('click', function () {
     // get input
