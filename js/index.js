@@ -16,8 +16,9 @@ document.getElementById('submit').addEventListener('click', function () {
     const addText = document.createElement('li');
     // console.log(addText);
     addText.innerText = inputText.value;
-
-    ulList.appendChild(addText);
+    if (0 < addText.innerText.length) {
+        ulList.appendChild(addText);
+    }
     inputText.value = '';
 
 })
