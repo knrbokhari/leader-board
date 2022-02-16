@@ -4,3 +4,20 @@ for (const item of changingColor) {
         event.target.style.color = '#2ebdff';
     })
 }
+
+document.getElementById("top-players").style.backgroundColor = 'rgb(255 163 0 / 10%)';
+
+document.getElementById('submit').addEventListener('click', function () {
+    // get input
+    const inputText = document.getElementById('input-text');
+    // graving ul
+    const ulList = document.getElementById('ul-list');
+    // console.log(ulList.innerHTML);
+    const addText = document.createElement('li');
+    // console.log(addText);
+    addText.innerText = inputText.value;
+
+    ulList.appendChild(addText);
+    inputText.value = '';
+
+})
